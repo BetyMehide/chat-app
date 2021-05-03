@@ -1,15 +1,20 @@
 # chat-app
 
-1. To run this app you'll need to have docker-compose installed.
+## Setup
+
+1. Pull the repo via git: `git clone https://github.com/BetyMehide/chat-app.git`
+
+2. To run this app you'll need to have docker-compose installed.
     Here are some instructions on how to set that up on MacOS: https://docs.docker.com/docker-for-mac/install/
 
     Double check that docker got installed by running `docker-compose --version`.
+3. Add `SECRET_KEY = "test"` to `src/config/settings.py`
 
-2. Build the container by running the following from the repository's root folder: `docker-compose -f docker/chat-app.yml build`
+4. Build the container by running the following from the repository's root folder: `docker-compose -f docker/chat-app.yml build`
 
-2. Then start the docker container containing the app: `docker-compose -f docker/chat-app.yml up`
+5. Then start the docker container containing the app: `docker-compose -f docker/chat-app.yml up`
 
-3. You should now be able to access the app at `http://0.0.0.0:8000/chat`
+6. You should now be able to access the app at `http://0.0.0.0:8000/chat`
 
 
 The app navigation build up:
