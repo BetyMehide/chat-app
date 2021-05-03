@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ConversationListView, ConversationCreateView, MessageListView, ThoughtListView
+from .views import ConversationCreateView, ConversationListView, MessageListView, ThoughtListView
 
 app_name = "chat"
 urlpatterns = [

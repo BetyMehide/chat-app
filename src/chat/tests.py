@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from django.test import TestCase, Client
 from django.db.utils import IntegrityError
+from django.test import TestCase, Client
 from lxml import html
 
 from chat.models import ConversationModel, MessageModel, ThoughtModel

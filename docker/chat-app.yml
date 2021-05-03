@@ -1,20 +1,15 @@
 version: "3.9"
    
 services:
-  postgres:
-    restart: always
+  db:
     image: postgres
-    container_name: postgres
     volumes:
       - ../data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-    networks:
-      - chat_app_net
   chat-app:
-    restart: always
     build: 
       context: ../
       dockerfile: docker/Dockerfile
@@ -24,14 +19,7 @@ services:
       - ../:/chat-app
     ports:
       - "8000:8000"
-      - "5432:5432"
     links:
-      - postgres:postgres
-    networks:
-      - chat_app_net
+      - db:db
     depends_on:
-      - postgres
-
-networks:
-  chat_app_net:
-    driver: bridge
+      - db

@@ -8,4 +8,3 @@ WORKDIR /chat-app/src
 COPY ./src/requirements.txt /chat-app/src
 RUN pip install -r requirements.txt
 COPY . /chat-app/
-RUN python /chat-app/src/manage.py migrate
