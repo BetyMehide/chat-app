@@ -12,7 +12,19 @@
 3. You should now be able to access the app at `http://0.0.0.0:8000/chat`
 
 
+The app navigation build up:
+
+```
+
+                 -> Messages (search, view, create new) -> Thoughts (view, create new)
+                |
+Conversations ---
+(search, view)  |
+                 -> Create new conversation
+```
+
+
 ---------------
 
-To run the test suit:
+To run the tests (requires the docker container to be built beforehand):
 `docker-compose -f docker/chat-app.yml run chat-app python manage.py test chat.tests`
