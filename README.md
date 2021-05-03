@@ -5,7 +5,9 @@
 
     Double check that docker got installed by running `docker-compose --version`.
 
-2. From this repository's root folder start the docker container containing the app: `docker-compose -f docker/chat-app.yml up`
+2. Build the container by running the following from the repository's root folder: `docker-compose -f docker/chat-app.yml build`
+
+2. Then start the docker container containing the app: `docker-compose -f docker/chat-app.yml up`
 
 3. You should now be able to access the app at `http://0.0.0.0:8000/chat`
 
