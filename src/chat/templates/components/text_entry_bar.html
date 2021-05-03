@@ -1,0 +1,11 @@
+{% load widget_tweaks %}
+
+<div class="msg-bar">
+    <form action='.' method='POST'>{% csrf_token %}
+        <div class="input-group">
+                {% render_field form.content class="form-control msg-content col-md-8" placeholder="Type here..." %}
+                {% render_field form.date_time class="form-control msg-date-time col-md-4" %}
+            <input class="btn btn-primary btn-lg msg-btn col-md-2" type='submit' value='Send'/>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+<div class="list-group">
+    {% for obj in object_list %}
+    <a href="{{ obj.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between"> 
+            <h5 class="mb-1">{{ obj.content }}</h5>
+            {% if obj.sub_content_count %}
+            <span class="badge badge-primary badge-pill msg-count-bubble">{{ obj.sub_content_count }}</span>
+            {% endif %}
+        </div>
+        {% if obj.description %}
+        <p class="mb-1">{{ obj.description }}</p>
+        {% endif %}
+        <small>{{ obj.date_time }}</small>
+    </a>
+    {% endfor %}
+</div>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<form action='.' method='POST'>{% csrf_token %}
+    <div class="mb-3">
+        <br>
+        Title:
+        {% render_field form.title class="form-control msg-content col-md-8" %}
+        <br>
+        Description:
+        {% render_field form.description class="form-control" %}
+        <br>
+        Date:
+        {% render_field form.date class="form-control msg-date-time col-md-8" %}
+        <br>
+        <input class="btn btn-primary btn-lg send-msg-btn" type='submit' value='Add new conversation'/>
+    </div>
+</form>
+
+{% endblock %}

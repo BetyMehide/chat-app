@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header bg-secondary text-light">{{ conversation.title }}</div>
+    <div class="card-body card-description">
+        <blockquote class="blockquote mb-0">
+            <p>{{ conversation.description }}</p>
+            <footer class="blockquote-footer">{{ conversation.date }}</footer>
+        </blockquote>
+    </div>
+</div>
+<br>
+
+{% include 'components/chat_table.html' %}
+{% include 'components/text_entry_bar.html' %}
+
+{% endblock %}

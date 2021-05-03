@@ -1,11 +1,16 @@
 # chat-app
 
-> The instructions are assuming a mac OS environment.
+1. To run this app you'll need to have docker installed.
+    Here are some instructions on how to set up docker on MacOS: https://docs.docker.com/docker-for-mac/install/
 
-1. Install docker following instructions here: https://docs.docker.com/docker-for-mac/install/
-2. From the repository's root folder run the docker container: `docker-compose -f docker/chat-app.yml up`
+    Double check that docker got installed by running `docker --version`.
+
+2. From this repository's root folder start the docker container containing the app: `docker-compose -f docker/chat-app.yml up`
+
+3. You should now be able to access the app at `http://0.0.0.0:8000/chat`
 
 
-In development from root folder run:
-`docker-compose -f docker/chat-app.yml build`
-`docker-compose -f docker/chat-app.yml run chat-app bash`
+---------------
+
+To run the test suit:
+`docker-compose -f docker/chat-app.yml run chat-app python manage.py test chat.tests`

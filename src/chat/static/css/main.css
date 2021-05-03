@@ -1,0 +1,73 @@
+h1 {
+    color: #B0A8B9;
+}
+
+#nav-bar {
+    margin-bottom: 20px;
+    height: auto;
+    box-shadow: 1px 1px 2px 3px gray;
+    padding-top: 0px;
+}
+
+#nav-back {
+    width: 30px;
+    height: 30px;
+}
+
+#main-content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+.search-btn,
+.msg-btn,
+.create-new-btn {
+    background-color: #B0A8B9;
+    border-color: #B0A8B9;
+    margin-left: 5px;
+}
+
+.search-btn:hover,
+.msg-btn:hover,
+.create-new-btn:hover {
+    background-color: #FAF1D9;
+    color: #909090;
+    border-color: #FAF1D9;
+    margin-left: 5px;
+}
+
+.create-new-btn {
+    margin-top: 15px;
+    display: block;
+    margin-right: 0;
+}
+
+.msg-count-bubble {
+    margin-top: 10px;
+    font-size: 80%;
+    background-color: #B0A8B9;
+}
+
+.msg-bar{
+    padding-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.msg-content {
+    height: 50px !important;
+    display:block;
+    padding-top: 12px;
+}
+
+.msg-date-time {
+    height: 50px !important;
+    font-size: smaller !important;
+}
+
+.card-description {
+    background-color: #FAF1D9;
+}
